@@ -1,0 +1,492 @@
+/* =========================================
+   CONFIGURACIÓN GENERAL
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: #f4f4f4;
+    color: #222222;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   ENCABEZADO
+   ========================================= */
+
+#inicio {
+    background-color: #171717;
+    color: #ffffff;
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+    border-bottom: 4px solid #6c2bd9;
+}
+
+#inicio h1 {
+    margin: 0 0 10px 0;
+
+    font-size: 42px;
+}
+
+#inicio p {
+    margin: 0;
+
+    font-size: 18px;
+}
+
+
+/* =========================================
+   NAVEGACIÓN
+   ========================================= */
+
+nav {
+    background-color: #6c2bd9;
+
+    padding: 15px 20px;
+}
+
+nav ul {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 30px;
+
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    display: block;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    padding: 8px 12px;
+
+    border-radius: 5px;
+
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #4d1f9b;
+}
+
+
+/* =========================================
+   CONTENIDO PRINCIPAL
+   ========================================= */
+
+main {
+    width: 100%;
+}
+
+
+/* =========================================
+   SECCIÓN PRODUCTOS
+   ========================================= */
+
+#productos {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 50px 20px;
+}
+
+#productos h2 {
+    color: #171717;
+
+    text-align: center;
+
+    font-size: 32px;
+
+    margin: 0 0 35px 0;
+}
+
+
+/* =========================================
+   GRID DE PRODUCTOS
+   ========================================= */
+
+.lista-productos {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================
+   TARJETAS
+   ========================================= */
+
+.producto {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    background-color: #ffffff;
+
+    border: 2px solid #dddddd;
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    margin: 0;
+
+    text-align: center;
+
+    width: 100%;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Efecto al pasar el mouse */
+.producto:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================
+   TÍTULOS DE PRODUCTOS
+   ========================================= */
+
+.producto h3 {
+    color: #6c2bd9;
+
+    font-size: 22px;
+
+    margin: 0 0 15px 0;
+}
+
+
+/* =========================================
+   CONTENEDOR DE IMAGEN
+   ========================================= */
+
+.imagen-producto {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    height: 240px;
+
+    margin-bottom: 18px;
+
+    background-color: #f8f8f8;
+
+    border: 2px solid #dddddd;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+}
+
+
+/* Imágenes */
+.imagen-producto img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    padding: 8px;
+}
+
+
+/* =========================================
+   DESCRIPCIÓN
+   ========================================= */
+
+.descripcion {
+    color: #444444;
+
+    font-size: 16px;
+
+    margin: 0 0 15px 0;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   PRECIO
+   ========================================= */
+
+.precio {
+    color: #6c2bd9;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    margin: auto 0 15px 0;
+}
+
+
+/* =========================================
+   BOTÓN
+   ========================================= */
+
+.boton {
+    display: inline-block;
+
+    background-color: #6c2bd9;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    padding: 10px 20px;
+
+    border-radius: 6px;
+
+    border: 2px solid #6c2bd9;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.boton:hover {
+    background-color: #ffffff;
+
+    color: #6c2bd9;
+}
+
+
+/* =========================================
+   SELECTOR AVANZADO
+   ========================================= */
+
+/* Destacamos el segundo producto */
+.producto:nth-child(2) {
+    border-color: #6c2bd9;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+#contacto {
+    display: flex;
+
+    justify-content: space-around;
+    align-items: flex-start;
+
+    flex-wrap: wrap;
+
+    gap: 30px;
+
+    background-color: #171717;
+
+    color: #ffffff;
+
+    padding: 35px 20px;
+
+    margin-top: 20px;
+
+    border-top: 4px solid #6c2bd9;
+}
+
+
+/* Bloques del footer */
+.informacion-contacto,
+.redes-sociales,
+.copyright {
+    min-width: 200px;
+
+    padding: 10px;
+}
+
+
+/* Título */
+#contacto h2 {
+    margin: 0 0 15px 0;
+
+    font-size: 24px;
+}
+
+
+/* Párrafos */
+#contacto p {
+    margin: 8px 0;
+}
+
+
+/* Enlace */
+#contacto a {
+    color: #b995ff;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+#contacto a:hover {
+    color: #ffffff;
+
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    #inicio h1 {
+        font-size: 36px;
+    }
+
+    #productos {
+        padding: 40px 20px;
+    }
+
+    .lista-productos {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 20px;
+    }
+
+    #contacto {
+        justify-content: center;
+
+        text-align: center;
+    }
+}
+
+
+/* =========================================
+   MÓVILES
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    #inicio {
+        padding: 30px 15px;
+    }
+
+    #inicio h1 {
+        font-size: 30px;
+    }
+
+    #inicio p {
+        font-size: 16px;
+    }
+
+
+    /* Menú vertical */
+    nav ul {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    nav a {
+        padding: 8px 15px;
+    }
+
+
+    /* Productos */
+    #productos {
+        padding: 30px 15px;
+    }
+
+    #productos h2 {
+        font-size: 26px;
+
+        margin-bottom: 25px;
+    }
+
+
+    /* Una columna */
+    .lista-productos {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+
+    /* Tarjetas */
+    .producto {
+        padding: 18px;
+    }
+
+
+    /* Imágenes más pequeñas */
+    .imagen-producto {
+        height: 220px;
+    }
+
+
+    /* Footer */
+    #contacto {
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+
+        padding: 30px 15px;
+
+        gap: 15px;
+    }
+
+    .informacion-contacto,
+    .redes-sociales,
+    .copyright {
+        width: 100%;
+
+        padding: 5px;
+    }
+}
